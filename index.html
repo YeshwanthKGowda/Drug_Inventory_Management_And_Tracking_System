@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Drug Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Company Logo" class="logo">
+        <h2>Drug Inventory Management</h2>
+        <p>Contact: support@druginventory.com | Phone: +91-9876543210</p>
+    </header>
+
+    <div class="container" id="auth-container">
+        
+        <!-- Login Form -->
+        <div id="login-box">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" />
+<input type="password" id="login-password" placeholder="Password" />
+
+            <button onclick="loginUser()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleAuth()">Sign Up</a></p>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-box" class="hidden">
+            <h2>Create Account</h2>
+            <input type="text" id="signup-firstname" placeholder="First Name">
+            <input type="text" id="signup-lastname" placeholder="Last Name">
+            <input type="text" id="signup-phone" placeholder="Phone Number">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="password" id="signup-password" placeholder="Password">
+            <input type="text" id="signup-address" placeholder="Address">
+            <input type="text" id="signup-state" placeholder="State">
+            <input type="text" id="signup-city" value="Bangalore" disabled>
+            <input type="text" id="signup-pincode" placeholder="Pincode">
+            <button onclick="registerUser()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="toggleAuth()">Login</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>

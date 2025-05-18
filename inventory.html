@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Company Logo" class="logo">
+        <h1>Inventory Management</h1>
+        <p>Contact: support@druginventory.com | Phone: +91-9876543210</p>
+    </header>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="home.html"><button>Home</button></a>
+            <a href="dashboard.html"><button>Dashboard</button></a>
+            <a href="billing.html"><button>Billing</button></a>
+            <a href="store.html"><button>Store</button></a>
+        </nav>
+    
+    <!-- Inventory Table -->
+    <section class="inventory-section">
+        <h2>Live Inventory Tracking</h2>
+        <table class="inventory-table">
+            <thead>
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Manufacturer</th>
+                    <th>Batch No.</th>
+                    <th>Expiry Date</th>
+                    <th>Stock Available</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="inventory-body">
+                <!-- Data will be inserted via JavaScript -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- AI-Based Demand Prediction Graph -->
+    <section class="prediction-section">
+        <h2>Predicted Demand for Next Month</h2>
+        <canvas id="demandChart"></canvas>
+    </section>
+
+    
+
+
+    <script src="inventory.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Invoice</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="invoice-container">
+    <h2>Invoice</h2>
+    <p><strong>Invoice No:</strong> <span id="invoiceNo"></span></p>
+    <p><strong>Date:</strong> <span id="invoiceDate"></span></p>
+
+    <table border="1" width="100%" id="invoiceTable">
+      <thead>
+        <tr>
+          <th>Drug Name</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="invoiceItems"></tbody>
+    </table>
+
+    <h3>Total: ₹<span id="totalAmount"></span></h3>
+
+    <button id="downloadInvoice">Download Invoice</button>
+  </div>
+
+  <script src="invoice.js"></script>
+</body>
+</html>

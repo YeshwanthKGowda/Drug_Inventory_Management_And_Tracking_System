@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="billing.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Company Logo" class="logo">
+        <h1>Billing</h1>
+        <p>Contact: support@druginventory.com | Phone: +91-9876543210</p>
+    </header>
+
+    <section class="billing-container">
+        <h2>Order Summary</h2>
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Price (₹)</th>
+                    <th>Quantity</th>
+                    <th>Total (₹)</th>
+                </tr>
+            </thead>
+            <tbody id="order-summary">
+                <!-- Order details will be loaded dynamically -->
+            </tbody>
+        </table>
+        <p><strong>Total Amount: ₹<span id="total-amount">0.00</span></strong></p>
+
+        <h2>Select Payment Method</h2>
+        <select id="payment-method" onchange="showPaymentOptions()">
+            <option value="">-- Select Payment Method --</option>
+            <option value="phonepe">PhonePe</option>
+            <option value="gpay">Google Pay</option>
+            <option value="paytm">Paytm</option>
+            <option value="debit">Debit Card</option>
+            <option value="credit">Credit Card</option>
+            <option value="cod">Cash on Delivery</option>
+        </select>
+
+        <!-- QR Code Display Section -->
+        <div id="qr-section" class="hidden">
+            <h3>Scan the QR Code to Pay</h3>
+            <img id="qr-code" src="" alt="QR Code" width="200">
+        </div>
+
+        <!-- Card Payment Section -->
+        <div id="card-section" class="hidden">
+            <h3>Enter Card Details</h3>
+            <input type="text" id="card-number" placeholder="Card Number" required>
+            <input type="text" id="card-name" placeholder="Card Holder Name" required>
+            <input type="month" id="expiry-date" required>
+            <input type="password" id="cvv" placeholder="CVV" required>
+        </div>
+
+        <button id="confirm-payment" onclick="processPayment()">Confirm Payment</button>
+    </section>
+
+</body>
+</html>

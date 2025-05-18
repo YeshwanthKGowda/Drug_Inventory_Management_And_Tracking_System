@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Tracking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="logo.png" alt="Company Logo" class="logo">
+        <h1>Order Tracking</h1>
+        <p>Contact: support@druginventory.com | Phone: +91-9876543210</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="dashboard.html"><button>Dashboard</button></a>
+        <a href="inventory.html"><button>Inventory</button></a>
+        <a href="billing.html"><button>Billing</button></a>
+        <a href="store.html"><button>Store</button></a>
+    </nav>
+
+    <!-- Order Tracking Section -->
+    <section class="order-tracking">
+        <h2>Order Details</h2>
+        <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+        <p><strong>Vendor Name:</strong> <span id="vendor-name"></span></p>
+        <p><strong>Order Date:</strong> <span id="order-date"></span></p>
+        <p><strong>Payment Status:</strong> <span id="payment-status"></span></p>
+        <p><strong>Payment Mode:</strong> <span id="payment-mode"></span></p>
+        <p><strong>Delivery Status:</strong> <span id="delivery-status"></span></p>
+        <p><strong>From:</strong> <span id="from-location"></span></p>
+        <p><strong>To:</strong> <span id="to-location"></span></p>
+        <p><strong>Estimated Delivery:</strong> <span id="delivery-date"></span></p>
+
+        <!-- Ordered Drugs Table -->
+        <h3>Drugs Ordered</h3>
+        <table class="tracking-table">
+            <thead>
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Quantity</th>
+                    <th>Price (₹)</th>
+                </tr>
+            </thead>
+            <tbody id="drug-list">
+                <!-- Data will be loaded dynamically -->
+            </tbody>
+        </table>
+    </section>
+
+    <script src="order-tracking.js"></script>
+</body>
+</html>
